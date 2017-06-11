@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="show-name col-md-8">
+    {{ album.name }}
+  </div>
+</div>
+
+<div class="row">
+
+  <div ng-if = "album.images.length > 2" class="col-md-8">
+    <img ng-src = "{{ album.images[2].url }}" alt="Image of {{ album.name }}"/>
+  </div>
+
+  <div ng-if = "album.images.length < 1" class="col-md-8">
+    <img ng-src = "http://placehold.it/100x100?text=No+Image" alt="Image of {{ album.name }}"/>
+  </div>
+
+</div>
